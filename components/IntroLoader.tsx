@@ -1,3 +1,4 @@
+import React from "react";
 import { View, ActivityIndicator, Text } from "react-native";
 
 const IntroLoader: React.FC = () => (

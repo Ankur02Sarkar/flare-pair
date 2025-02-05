@@ -1,13 +1,35 @@
-import { View, Text } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
+import React, { useState, useEffect } from "react";
 
-const HomePage: React.FC = () => (
-  <LinearGradient
-    colors={["#f2665e", "#e2203f"]}
-    className="flex-1 justify-center items-center p-4"
-  >
-    <Text className="text-[4rem] font-bold text-gray-200 mb-4">FlarePair</Text>
-  </LinearGradient>
-);
+import { Text, View, StyleSheet } from "react-native";
+import AppLoading from "expo-app-loading";
+import { useFonts, Pacifico_400Regular } from "@expo-google-fonts/pacifico";
+import { LinearGradient } from "react-native-svg";
 
-export default HomePage;
+export default function HomePage() {
+  let [fontsLoaded] = useFonts({
+    Pacifico_400Regular,
+  });
+
+  let fontSize = 24;
+  let paddingVertical = 6;
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text
+          style={{
+            fontSize,
+            color: "white",
+            paddingVertical,
+            // Note the quoting of the value for `fontFamily` here; it expects a string!
+            fontFamily: "Pacifico_400Regular",
+          }}
+        >
+          Pacifico Regular
+        </Text>
+      </View>
+    );
+  }
+}
