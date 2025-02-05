@@ -1,39 +1,42 @@
 import React, { useRef, useEffect } from "react";
 import { Animated } from "react-native";
-import AppLoading from "expo-app-loading";
+import * as SplashScreen from "expo-splash-screen";
 import { useFonts, Pacifico_400Regular } from "@expo-google-fonts/pacifico";
 import { LinearGradient } from "expo-linear-gradient";
 
+// Prevent the splash screen from auto-hiding
+SplashScreen.preventAutoHideAsync();
+
 export default function HomePage() {
-  // Load the Pacifico font
-  let [fontsLoaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     Pacifico_400Regular,
   });
 
-  // Create an animated value for the scaling effect
   const scaleAnim = useRef(new Animated.Value(0)).current;
 
-  // Animate with a bounce effect
   useEffect(() => {
-    Animated.sequence([
-      // Animate from 0 to 1.2 (overshoot)
-      Animated.timing(scaleAnim, {
-        toValue: 1.2,
-        duration: 500,
-        useNativeDriver: true,
-      }),
-      // Bounce back to 1
-      Animated.spring(scaleAnim, {
-        toValue: 1,
-        friction: 3,
-        tension: 40,
-        useNativeDriver: true,
-      }),
-    ]).start();
-  }, []);
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
 
+      Animated.sequence([
+        Animated.timing(scaleAnim, {
+          toValue: 1.2,
+          duration: 400,
+          useNativeDriver: true,
+        }),
+        Animated.spring(scaleAnim, {
+          toValue: 1,
+          friction: 3,
+          tension: 40,
+          useNativeDriver: true,
+        }),
+      ]).start();
+    }
+  }, [fontsLoaded, scaleAnim]);
+
+  // While fonts aren't loaded, render nothing (splash screen remains visible)
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return null;
   }
 
   return (
