@@ -1,12 +1,13 @@
 import { View, Text } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 const HomePage: React.FC = () => (
-  <View className="flex-1 justify-center items-center bg-gray-50 p-4">
-    <Text className="text-2xl font-bold text-gray-800 mb-4">Welcome Home!</Text>
-    <Text className="text-gray-600 text-center">
-      This is your main application screen
-    </Text>
-  </View>
+  <LinearGradient
+    colors={["#f2665e", "#e2203f"]}
+    className="flex-1 justify-center items-center p-4"
+  >
+    <Text className="text-[4rem] font-bold text-gray-200 mb-4">FlarePair</Text>
+  </LinearGradient>
 );
 
 export default HomePage;
