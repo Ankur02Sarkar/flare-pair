@@ -2,7 +2,7 @@ import { Button, TextInput, View, StyleSheet } from "react-native";
 import { useSignUp } from "@clerk/clerk-expo";
 import { useState } from "react";
 import { Stack } from "expo-router";
-import React = require("react");
+import React from "react";
 
 const Register = () => {
   const { isLoaded, signUp, setActive } = useSignUp();

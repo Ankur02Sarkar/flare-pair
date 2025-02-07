@@ -2,7 +2,7 @@ import { View, StyleSheet, TextInput, Button } from "react-native";
 import { useState } from "react";
 import { Stack } from "expo-router";
 import { useSignIn } from "@clerk/clerk-expo";
-import React = require("react");
+import React from "react";
 
 const PwReset = () => {
   const [emailAddress, setEmailAddress] = useState("");
