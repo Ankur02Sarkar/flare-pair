@@ -4,7 +4,7 @@
     "": {
       "name": "flare-pair",
       "dependencies": {
-        "@clerk/clerk-expo": "^2.7.4",
+        "@clerk/clerk-expo": "^2.7.5",
         "@clerk/types": "^4.45.0",
         "@expo-google-fonts/pacifico": "^0.2.3",
         "@react-navigation/native": "^7.0.0",
@@ -26,6 +26,7 @@
         "expo-splash-screen": "~0.29.20",
         "expo-status-bar": "~2.0.1",
         "expo-system-ui": "~4.0.7",
+        "expo-web-browser": "^14.0.2",
         "lottie-react-native": "7.1.0",
         "lucide-react-native": "^0.378.0",
         "nativewind": "^4.1.23",
@@ -312,11 +313,11 @@
 
     "@babel/types": ["@babel/types@7.26.7", "", { "dependencies": { "@babel/helper-string-parser": "^7.25.9", "@babel/helper-validator-identifier": "^7.25.9" } }, "sha512-t8kDRGrKXyp6+tjUh7hw2RLyclsW4TRoRvRHtSyAX9Bb5ldlFh+90YAYY6awRXrlB4G5G2izNeGySpATlFzmOg=="],
 
-    "@clerk/clerk-expo": ["@clerk/clerk-expo@2.7.4", "", { "dependencies": { "@clerk/clerk-js": "^5.52.0", "@clerk/clerk-react": "^5.22.10", "@clerk/shared": "^2.20.18", "@clerk/types": "^4.45.0", "base-64": "^1.0.0", "react-native-url-polyfill": "2.0.0", "tslib": "2.4.1" }, "peerDependencies": { "@clerk/expo-passkeys": ">=0.0.6", "expo-auth-session": ">=5", "expo-local-authentication": ">=13.5.0", "expo-secure-store": ">=12.4.0", "expo-web-browser": ">=12.5.0", "react": "^18.0.0 || ^19.0.0 || ^19.0.0-0", "react-dom": "^18.0.0 || ^19.0.0 || ^19.0.0-0", "react-native": ">=0.73" }, "optionalPeers": ["@clerk/expo-passkeys", "expo-local-authentication", "expo-secure-store"] }, "sha512-QV4r6TAKjGww8gp3RpgsXNAz/hHm2COKA3bFT1kUGykF5zZRB+DDMXGlCGRXcz+1HSlnl3NzHJlr4cOJR29xUw=="],
+    "@clerk/clerk-expo": ["@clerk/clerk-expo@2.7.5", "", { "dependencies": { "@clerk/clerk-js": "^5.52.1", "@clerk/clerk-react": "^5.22.11", "@clerk/shared": "^2.20.18", "@clerk/types": "^4.45.0", "base-64": "^1.0.0", "react-native-url-polyfill": "2.0.0", "tslib": "2.4.1" }, "peerDependencies": { "@clerk/expo-passkeys": ">=0.0.6", "expo-auth-session": ">=5", "expo-local-authentication": ">=13.5.0", "expo-secure-store": ">=12.4.0", "expo-web-browser": ">=12.5.0", "react": "^18.0.0 || ^19.0.0 || ^19.0.0-0", "react-dom": "^18.0.0 || ^19.0.0 || ^19.0.0-0", "react-native": ">=0.73" }, "optionalPeers": ["@clerk/expo-passkeys", "expo-local-authentication", "expo-secure-store"] }, "sha512-q7phKCwon9qM/VZdIpbSpDEHatigk7poKTk1051Zrippi9Nc5BWTzhyzkNLJ/HmWouTwY/pldSCMjPv0AUQ+qw=="],
 
-    "@clerk/clerk-js": ["@clerk/clerk-js@5.52.0", "", { "dependencies": { "@clerk/localizations": "^3.10.4", "@clerk/shared": "^2.20.18", "@clerk/types": "^4.45.0", "@coinbase/wallet-sdk": "4.2.4", "@emotion/cache": "11.11.0", "@emotion/react": "11.11.1", "@floating-ui/react": "0.25.4", "@floating-ui/react-dom": "^2.0.2", "@formkit/auto-animate": "^0.8.1", "@swc/helpers": "^0.5.13", "@zxcvbn-ts/core": "3.0.4", "@zxcvbn-ts/language-common": "3.0.4", "browser-tabs-lock": "1.2.15", "copy-to-clipboard": "3.3.3", "core-js": "3.26.1", "crypto-js": "^4.2.0", "dequal": "2.0.3", "qrcode.react": "3.1.0", "regenerator-runtime": "0.13.11" }, "peerDependencies": { "react": "^18.0.0 || ^19.0.0 || ^19.0.0-0", "react-dom": "^18.0.0 || ^19.0.0 || ^19.0.0-0" } }, "sha512-NnnjYNVX586CLEbV564pPvEEyL3WR8JHoqO25H1ZAGKIhuVSFWtYJQ+Nxewn+Q/cO5O8LdN8RnMgJC5AVVjxRg=="],
+    "@clerk/clerk-js": ["@clerk/clerk-js@5.52.1", "", { "dependencies": { "@clerk/localizations": "^3.10.4", "@clerk/shared": "^2.20.18", "@clerk/types": "^4.45.0", "@coinbase/wallet-sdk": "4.2.4", "@emotion/cache": "11.11.0", "@emotion/react": "11.11.1", "@floating-ui/react": "0.25.4", "@floating-ui/react-dom": "^2.0.2", "@formkit/auto-animate": "^0.8.1", "@swc/helpers": "^0.5.13", "@zxcvbn-ts/core": "3.0.4", "@zxcvbn-ts/language-common": "3.0.4", "browser-tabs-lock": "1.2.15", "copy-to-clipboard": "3.3.3", "core-js": "3.26.1", "crypto-js": "^4.2.0", "dequal": "2.0.3", "qrcode.react": "3.1.0", "regenerator-runtime": "0.13.11" }, "peerDependencies": { "react": "^18.0.0 || ^19.0.0 || ^19.0.0-0", "react-dom": "^18.0.0 || ^19.0.0 || ^19.0.0-0" } }, "sha512-3Ae8mUV1mz5Z0LiXJytVpkFy6J749KSYnNq5qdDOIjgkXPqJrIwu38TNluaOJYojLxYNLjBnuC9t7TbrMG9tpA=="],
 
-    "@clerk/clerk-react": ["@clerk/clerk-react@5.22.10", "", { "dependencies": { "@clerk/shared": "^2.20.18", "@clerk/types": "^4.45.0", "tslib": "2.4.1" }, "peerDependencies": { "react": "^18.0.0 || ^19.0.0 || ^19.0.0-0", "react-dom": "^18.0.0 || ^19.0.0 || ^19.0.0-0" } }, "sha512-3tTUt+3w5E+4ePl+6q6ugNTgjyjQw000nouXRngCEorDC2545Lc2HTZ37n1W8WuTx2BN32Rerjf2UJDmpRqrYg=="],
+    "@clerk/clerk-react": ["@clerk/clerk-react@5.22.11", "", { "dependencies": { "@clerk/shared": "^2.20.18", "@clerk/types": "^4.45.0", "tslib": "2.4.1" }, "peerDependencies": { "react": "^18.0.0 || ^19.0.0 || ^19.0.0-0", "react-dom": "^18.0.0 || ^19.0.0 || ^19.0.0-0" } }, "sha512-u7g9MXxHuWBqVLvlXuvaq3tOmZqKhJAJMccSUHFSMmJsyjZsk5psBi4ek8iap33wbhZuyak/rwcbHwcK2yE0bQ=="],
 
     "@clerk/localizations": ["@clerk/localizations@3.10.4", "", { "dependencies": { "@clerk/types": "^4.45.0" } }, "sha512-VgSDl0xrAtZZHsqfhzlwLRz9uXAKYP7VXyK6KAexYsydML4eG5GnsyuXqb3ZzbkxzvVmD9CxOVwfSf9xrpKzPg=="],
 

@@ -13,7 +13,7 @@
     "postinstall": "npx tailwindcss -i ./global.css -o ./node_modules/.cache/nativewind/global.css"
   },
   "dependencies": {
-    "@clerk/clerk-expo": "^2.7.4",
+    "@clerk/clerk-expo": "^2.7.5",
     "@clerk/types": "^4.45.0",
     "@expo-google-fonts/pacifico": "^0.2.3",
     "@react-navigation/native": "^7.0.0",
@@ -35,6 +35,7 @@
     "expo-splash-screen": "~0.29.20",
     "expo-status-bar": "~2.0.1",
     "expo-system-ui": "~4.0.7",
+    "expo-web-browser": "^14.0.2",
     "lottie-react-native": "7.1.0",
     "lucide-react-native": "^0.378.0",
     "nativewind": "^4.1.23",
