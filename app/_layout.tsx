@@ -1,5 +1,4 @@
 import "~/global.css";
-import { ClerkProvider, ClerkLoaded } from "@clerk/clerk-expo";
 import {
   DarkTheme,
   DefaultTheme,
@@ -13,9 +12,7 @@ import { Platform } from "react-native";
 import { NAV_THEME } from "~/lib/constants";
 import { useColorScheme } from "~/lib/useColorScheme";
 import { PortalHost } from "@rn-primitives/portal";
-import { ThemeToggle } from "~/components/ThemeToggle";
 import { setAndroidNavigationBar } from "~/lib/android-navigation-bar";
-import { tokenCache } from "~/utils/cache";
 
 const LIGHT_THEME: Theme = {
   ...DefaultTheme,
@@ -54,34 +51,24 @@ export default function RootLayout() {
     return null;
   }
 
-  const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!;
-
-  if (!publishableKey) {
-    throw new Error("Add EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY to your .env file");
-  }
-
   return (
-    <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
-      <ClerkLoaded>
-        <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-          <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
-          <Stack
-            screenOptions={{
-              headerShown: false,
-            }}
-          >
-            {/* <Stack.Screen
+    <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+      <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        {/* <Stack.Screen
               name="index"
               options={{
                 title: "Flare Pair",
                 headerRight: () => <ThemeToggle />,
               }}
             /> */}
-          </Stack>
-          <PortalHost />
-        </ThemeProvider>
-      </ClerkLoaded>
-    </ClerkProvider>
+      </Stack>
+      <PortalHost />
+    </ThemeProvider>
   );
 }
 
